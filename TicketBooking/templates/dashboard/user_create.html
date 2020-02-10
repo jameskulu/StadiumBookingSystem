@@ -1,0 +1,33 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST" action="/dashboard/users/create" onsubmit="return validateUser()">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">User Email</label>
+       {{ form.User_Email }}
+          <span class="text-danger" id="spanusercreate"></span>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">User Password</label>
+       {{ form.User_Password }}
+       <span class="text-danger" id="spanuserpassword"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add User</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+
+
+
+
+{% endblock %}

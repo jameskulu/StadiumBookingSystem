@@ -1,0 +1,51 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST" action="/dashboard/booking/update/{{booking.Booking_Id}}" onsubmit="return validateBookingEdit()">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">No of Tickets</label>
+    <input type="number" class="form-control" name="No_Of_Tickets" value="{{ booking.No_Of_Tickets }}" min=1 max=20 required>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">Type of seat</label>
+      <select name="Type_Of_Seats" class="form-control">
+        <option value="VIP - Rs.1500 /- per ticket">VIP - Rs.1500 /- per ticket</option>
+        <option value="Side Stands - Rs.700 /- per ticket">Side Stands - Rs.700 /- per ticket</option>
+        <option value="End Stands - Rs.500 /- per ticket">End Stands - Rs.500 /- per ticket</option>
+        <option value="Height In The Ground - Rs.1000 /- per ticket">Height In The Ground - Rs.1000 /- per ticket</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">Email</label>
+    <input id="bookingemailedit" type="text" class="form-control" name="Customer_id" value="{{ booking.Customer_id }}">
+      <span id="spanbookingemailedit" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">Matches</label>
+      <select class="form-control" name="Match">
+        {% for match in matches %}
+        <option value='{{match.Match_Id}}'>{{match.Match_Name}}</option>
+       {% endfor %}
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+
+
+
+
+{% endblock %}

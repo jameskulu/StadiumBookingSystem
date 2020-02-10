@@ -1,0 +1,33 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST" action="/dashboard/users/update/{{user.User_Id}}" onsubmit="return validateUserEdit()">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">User Email</label>
+    <input id="useremailedit" type="text" class="form-control" name="User_Email" value="{{ user.User_Email }}">
+    <span class="text-danger" id="spanuseremailedit"></span>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">User Password</label>
+    <input id="userpasswordedit" type="password" class="form-control" name="User_Password" value="{{ user.User_Password }}">
+    <span class="text-danger" id="spanuserpasswordedit"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+
+
+
+
+{% endblock %}

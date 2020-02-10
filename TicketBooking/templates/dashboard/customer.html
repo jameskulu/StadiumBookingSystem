@@ -1,0 +1,58 @@
+{% extends "dashboard/dashboard.html" %}
+
+
+{% block content %}
+
+<div class="col-lg-9">
+  <input id="customerssearch" style="margin:10px 0;" class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+<div class="table-responsive">
+  <table style="margin-top:50px;" class="table table-hover table-condensed" >
+      <tr>
+
+        <th scope="col">Customer ID</th>
+        <th scope="col">Customer First Name</th>
+        <th scope="col">Customer Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+
+      </tr>
+
+      {% for customer in customers %}
+
+      <tr>
+        <tbody>
+
+          <td>{{customer.Customer_Id}}</td>
+          <td>{{customer.Customer_First_Name}}</td>
+          <td>{{customer.Customer_Last_Name}}</td>
+          <td>{{customer.Customer_Email}}</td>
+          <td>
+            <a href="/dashboard/customer/edit/{{customer.Customer_Id}}">  <button class="btn btn-primary" type="button" name="button1">Edit</button></a>
+            <a id="deletecustomer" href="/dashboard/customer/delete/{{customer.Customer_Id}}">  <button class="btn btn-danger" type="button" name="button2">Delete</button> </a>
+          </td>
+
+        </tbody>
+      </tr>
+
+      {% endfor %}
+  </table>
+
+  </div>
+  <form style="float:right;" action="/dashboard/customer" method="POST">
+    {% csrf_token %}
+      <button class="btn btn-outline-secondary" type="submit" id="prev" value="prev" name="prev">Previous</button>
+      <input class="form" style="width:40px;height:30px;" type="number" name="page" id="page" value="{{page}}" min="1" readonly>
+      <button class="btn btn-outline-secondary" type="submit" id="next" value="next" name="next">Next</button>
+  </form>
+  </div>
+  <!-- /.col-lg-9 -->
+
+  <script>
+    $(document).ready(()=>{
+        $(".sidebar").find(".active").removeClass("active");
+      $("#customernav").addClass("active");
+  })
+  </script>
+
+  {% endblock %}

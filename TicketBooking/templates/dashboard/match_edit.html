@@ -1,0 +1,24 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST" action="/dashboard/matches/update/{{match.Match_Id}}" onsubmit="return validateMatchEdit()">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">Matches</label>
+         <input id="matchedit" type="text" class="form-control" name="Match_Name" value="{{match.Match_Name}}" autocomplete="off">
+         <span class="text-danger" id="spanmatchedit"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+{% endblock %}

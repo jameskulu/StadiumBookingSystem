@@ -1,0 +1,48 @@
+{% extends "dashboard/dashboard.html" %}
+
+
+{% block content %}
+
+
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST"  action="/dashboard/matches/create" onsubmit="return validateMatch()">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">Matches</label>
+       {{ form.Match_Name }}
+       <span class="text-danger" id="spanmatchcreate"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submitbtn">Add Match</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+
+
+<!-- <script>
+$(document).ready(()=>{
+  $("#id_Match_Name").keyup(()=>{
+    if ($("#id_Match_Name").val().length>5){
+      alert("greater than 5")
+      $("#submitbtn").prop("disabled",true)
+    }
+  })
+})
+</script> -->
+
+
+  <!-- // let a = document.getElementById("#id_Match_Name").keyup();
+  // if(a.value().length>5){
+  //   alert("greater than 5");
+  //   document.getElementById("#submitbtn").disabled=true;
+  // } -->
+
+
+
+{% endblock %}

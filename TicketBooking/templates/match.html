@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matches</title>
+    <link rel="icon" href="{% static 'images/main.png' %}">
+    <!-- External css -->
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <!-- <link rel="stylesheet" href="../static/css/style1.css"> -->
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="../static/css/bootstrap.min.css"> -->
+    <style>
+    .nav ul li a:hover{background-color:lightgray;transition: 0.4s ease;}
+    </style>
+  </head>
+  <body>
+  <div class="main">
+
+      <div class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+      <a href="/"> <img src="{% static 'images/logo1.png' %}" alt="logo"></a>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="nav">
+          <ul class ="navul" id="check-class">
+            <li><a href="/">Home</a></li>
+            <li ><a class="active" href="/matches">Matches</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+          <!-- <a class="mobile-icon" onclick="slideshow()" href="#" > <i class="fa fa-bars fa-3px"></i> </a> -->
+        </div>
+
+        <!-- CONTENT -->
+
+       <div class="content">
+         <div style="margin-top:20px;" class="container">
+
+             <!-- Match 1 -->
+             <div class="card card-body">
+              <div class="card-header">
+                Sat 15 Feb (15:30)
+              </div>
+              <div class="card-body text-center font-weight-bold">
+              <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/1.png' %}" alt="armed">  Armed Police Force Club  &nbsp; &nbsp;- &nbsp; &nbsp; Three Star Club <img style="width:30px;" src="{% static 'images/club/13.png' %}" alt="three"> </h5>
+              </div>
+            </div>
+
+            <!-- Match 2 -->
+            <div class="card card-body">
+             <div class="card-header">
+               Sat 15 Feb (15:30)
+             </div>
+             <div class="card-body text-center font-weight-bold">
+              <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/4.png' %}" alt="friends"> Friends Club  &nbsp; &nbsp;-  &nbsp; &nbsp;Brigade Boys Club <img style="width:30px;" src="{% static 'images/club/2.png' %}" alt="brigade"> </h5>
+             </div>
+           </div>
+
+           <!-- Match 3 -->
+           <div class="card card-body">
+            <div class="card-header">
+              Sun 16 Feb (13:45)
+            </div>
+            <div class="card-body text-center font-weight-bold">
+            <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/7.png' %}" alt="machindra">  Machhindra Club &nbsp; &nbsp; - &nbsp; &nbsp; Nepal Police Club <img style="width:30px;" src="{% static 'images/club/n.gif' %}" alt="police"> </h5>
+            </div>
+          </div>
+
+          <!-- Match 4 -->
+          <div class="card card-body">
+           <div class="card-header">
+             Sat 15 Feb (18:00)
+           </div>
+           <div class="card-body text-center font-weight-bold">
+            <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/8.png' %}" alt="manang"> Manang Marsyangdi Club  &nbsp; &nbsp;-  &nbsp; &nbsp;Jawlakhel Youth Club <img style="width:30px;" src="{% static 'images/club/6.png' %}" alt="jawlakhel"></h5>
+           </div>
+         </div>
+
+         <!-- Match 5 -->
+         <div class="card card-body">
+          <div class="card-header ">
+            Mon 17 Feb (17:00)
+          </div>
+          <div class="card-body text-center font-weight-bold">
+          <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/10.png' %}" alt="himalayan">  Himalayan Sherpa Club &nbsp; &nbsp; - &nbsp; &nbsp; Saraswoti Youth Club <img style="width:30px;" src="{% static 'images/club/12.png' %}" alt="saraswoti"></h5>
+          </div>
+        </div>
+
+        <!-- Match 6 -->
+        <div class="card card-body">
+         <div class="card-header">
+           Sat 15 Feb (14:30)
+         </div>
+         <div class="card-body text-center font-weight-bold">
+        <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/11.png' %}" alt="sankata">   Sankata Club &nbsp; &nbsp; - &nbsp; &nbsp; Chyasal Youth Club <img style="width:30px;" src="{% static 'images/club/3.png' %}" alt="chyasal"> </h5>
+         </div>
+       </div>
+
+       <!-- Match 7 -->
+       <div class="card card-body">
+        <div class="card-header">
+          Tue 18 Feb (12:30)
+        </div>
+        <div class="card-body text-center font-weight-bold">
+          <h5 class="matchmedia"> <img style="width:30px;" src="{% static 'images/club/14.png' %}" alt="tribhuwan">Tribhuvan Army Club &nbsp; &nbsp; - &nbsp; &nbsp; New Road Team <img style="width:30px;" src="{% static 'images/club/10.png' %}" alt="newroad"></h5>
+        </div>
+      </div>
+
+         </div>
+
+     </div>  <!-- content -->
+
+      <div id="ft" class="footer">
+
+         <div class="container">
+           <div class="row">
+
+             <div style="margin-top:50px;" class="col-md-4 col-sm-4 col-xs-4">
+               <h1><span>S</span>tadium <span>T</span>ickets</h1>
+               <ul>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="/matches">Matches</a></li>
+                 <li><a href="/contact">Contact</a></li>
+               </ul>
+               <p>Stadium Tickets &copy; 2020</p>
+             </div>
+
+             <div style="margin-top:50px;" class="col-md-4 col-sm-4 col-xs-4">
+                  <div class="location">
+                      <img class="sndlogo" src="../static/images/location.png" alt="location">
+                      <p>Satdobato,Lalitpur <br>Nepal</p>
+                  </div>
+                  <div class="phone">
+                      <img class="sndlogo" src="../static/images/phone.png" alt="phone">
+                      <p>01-5549203</p>
+                  </div>
+                  <div class="email">
+                      <img class="sndlogo" src="../static/images/gmail.png" alt="email">
+                      <p> stadiumbooking@gmail.com</p>
+                  </div>
+             </div>
+
+             <div style="margin-top:50px;margin-bottom:50px;" class="col-md-4 col-sm-4 col-xs-4">
+               <div class="para">
+                 <p>About The Company</p>
+                 <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+               </div>
+               <div class="media">
+
+                 <a href="http://www.facebook.com">  <img class="thdlogo" src="{% static 'images/fb.png' %}" alt="fb"></a>
+                <a href="http://www.instagram.com">  <img class="thdlogo" src="{% static 'images/insta.png' %}" alt="insta"></a>
+                  <a href="http://www.twitter.com"><img class="thdlogo" src="{% static 'images/twitter.png' %}" alt="twitter"></a>
+              </div>
+             </div>
+
+           </div>
+         </div>
+
+
+      </div> <!-- footer -->
+    </div> <!-- main -->
+
+    <!-- JQUERY  -->
+    <script type="text/javascript" src="{% static 'jquery/jquery-3.4.1.slim.min.js' %}"></script>
+    <!-- <script type="text/javascript" src="../static/jquery/jquery-3.4.1.slim.min.js"></script> -->
+    <!-- BOOTSTRAP JQUERY -->
+    <script type="text/javascript" src="{% static 'jquery/popper.min.js' %}"></script>
+    <!-- <script type="text/javascript" src="../static/jquery/popper.min.js"></script> -->
+    <script type="text/javascript" src="{% static 'jquery/bootstrap.min.js' %}"></script>
+    <!-- <script type="text/javascript" src="../static/jquery/bootstrap.min.js"></script> -->
+
+    <!-- EXTERNAL JQUERY -->
+    <script type="text/javascript" src="{% static 'jquery/jquery.js' %}"></script>
+    <!-- <script type="text/javascript" src="../static/jquery/jquery.js"></script> -->
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script type="text/javascript" src="{% static 'javascript/javascript.js' %}"></script>
+    <!-- <script type="text/javascript" src="../static/javascript/javascript.js"></script> -->
+     </script>
+
+  </body>
+</html>

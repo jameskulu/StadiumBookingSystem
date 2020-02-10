@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="icon" href="{% static 'images/main.png' %}">
+
+    <!-- External css -->
+     <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+      <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <style>
+    .nav ul li a:hover{background-color: lightgray;transition: 0.4s ease;}
+    </style>
+  </head>
+  <body>
+  <div class="main">
+
+      <div class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+      <a href="/"> <img src="{% static 'images/logo1.png' %}" alt="logo"></a>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="nav">
+          <ul class ="navul" id="check-class">
+            <li><a href="/">Home</a></li>
+            <li><a href="/matches">Matches</a></li>
+            <li ><a class="active" href="/contact">Contact</a></li>
+          </ul>
+        </div>
+            <!-- <a class="mobile-icon" onclick="slideshow()" href="#" > <i class="fa fa-bars fa-3px"></i> </a> -->
+        </div>
+
+        <!-- CONTENT -->
+
+       <div  style="margin-top:60px;" class="content">
+
+         <div class="container">
+           <div class="row">
+
+           <div id="image" class="col-lg-8 col-md-10 ">
+             <img id="cimg" class="rounded" src="{% static 'images/stadium.jpg' %}" alt="stadium">
+           </div>
+
+           <div id="para" class="col-lg-4 col-md-2 ">
+             <h1>Well, Hello there!</h1>
+             <p>Welcome to our ticket booking website,
+               nestled in the heart of Lalitpur.
+               We serve people to book tickets for the exciting club
+               football games of Nepal, online. </p>
+             <p>For more timely and accurate response
+               to your opinion, you can follow us on social media
+               or you can contact us in these following details. </p>
+             <p>Phone : 01-5549203 <br>
+               Email : stadiumbooking@gmail.com <br>
+               Satdobato, Lalitpur <br>
+               Nepal
+             </p>
+
+
+           </div>
+            </div>
+
+         </div>
+
+     </div>  <!-- content -->
+
+      <div id="ft" class="footer">
+
+         <div class="container">
+           <div class="row">
+
+             <div style="margin-top:50px;" class="col-md-4 col-sm-4 col-xs-4">
+               <h1><span>S</span>tadium <span>T</span>ickets</h1>
+               <ul>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="/matches">Matches</a></li>
+                 <li><a href="/contact">Contact</a></li>
+               </ul>
+               <p>Stadium Tickets &copy; 2020</p>
+             </div>
+
+             <div style="margin-top:50px;" class="col-md-4 col-sm-4 col-xs-4">
+                  <div class="location">
+                    <img class="sndlogo" src="{% static 'images/location.png' %}" alt="location">
+                    <p>Satdobato,Lalitpur <br>Nepal</p>
+                </div>
+                <div class="phone">
+                    <img class="sndlogo" src="{% static 'images/phone.png' %}" alt="phone">
+                    <p>01-5549203</p>
+                </div>
+                <div class="email">
+                    <img class="sndlogo" src="{% static 'images/gmail.png' %}" alt="email">
+                    <p> stadiumbooking@gmail.com</p>
+                  </div>
+             </div>
+
+             <div style="margin-top:50px;margin-bottom:50px;" class="col-md-4 col-sm-4 col-xs-4">
+               <div class="para">
+                 <p>About The Company</p>
+                 <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+               </div>
+               <div class="media">
+
+                 <a href="http://www.facebook.com">  <img class="thdlogo" src="{% static 'images/fb.png' %}" alt="fb"></a>
+                <a href="http://www.instagram.com">  <img class="thdlogo" src="{% static 'images/insta.png' %}" alt="insta"></a>
+                  <a href="http://www.twitter.com"><img class="thdlogo" src="{% static 'images/twitter.png' %}" alt="twitter"></a>
+                 </div>
+             </div>
+
+           </div>
+         </div>
+
+
+      </div> <!-- footer -->
+    </div> <!-- main -->
+
+    <!-- JQUERY  -->
+    <script type="text/javascript" src="{% static 'jquery/jquery-3.4.1.slim.min.js' %}"></script>
+
+      <!-- BOOTSTRAP JQUERY -->
+    <script type="text/javascript" src="{% static 'jquery/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/bootstrap.min.js' %}"></script>
+
+    <!-- EXTERNAL JQUERY -->
+    <script type="text/javascript" src="{% static 'jquery/jquery.js' %}"></script>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script type="text/javascript" src="{% static 'javascript/javascript.js' %}"></script>
+
+  </body>
+</html>

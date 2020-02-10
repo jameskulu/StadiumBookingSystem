@@ -1,0 +1,39 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<div class="col-lg-8">
+
+<div style="margin-top:20px;" class="container">
+  <form method="POST" action="/dashboard/customer/update/{{customer.Customer_Id}}" onsubmit="return validateCustomerEdit()" >
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label class="font-weight-bold">Customer First Name</label>
+    <input id="customerfirstnameedit" type="text" class="form-control" name="Customer_First_Name" value="{{customer.Customer_First_Name}}">
+    <span class="text-danger" id="spancustomerfirstnameedit"></span>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">Customer Last Name</label>
+    <input id="customerlastnameedit" type="text" class="form-control" name="Customer_Last_Name" value="{{customer.Customer_Last_Name}}">
+    <span class="text-danger" id="spancustomerlastnameedit"></span>
+    </div>
+
+    <div class="form-group">
+      <label class="font-weight-bold">Customer Email</label>
+    <input id="customeremailedit" type="text" class="form-control" name="Customer_Email" value="{{customer.Customer_Email}}">
+    <span class="text-danger" id="spancustomeremailedit"></span>
+    </div>
+
+    <button type="submit" name="Submit" class="btn btn-primary">Edit</button>
+    </form>
+     </div> <!-- FORM -->
+     </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<div class="col-lg-9">
+    <input id="usersearch" style="margin:10px 0;" class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <!-- <button  style="margin:10px 0 0 5px;" type="button" class="btn btn-dark">Search</button> -->
+    <a href="/dashboard/users/create" class="btn btn-primary">Add User</a>
+
+<div class="table-responsive">
+  <table style="margin-top:50px;" class="table table-hover table-condensed" >
+      <tr>
+
+        <th scope="col">User ID</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th>
+      </tr>
+
+      {% for user in users %}
+
+      <tr>
+        <tbody>
+          <td>{{user.User_Id}}</td>
+          <td>{{user.User_Email}}</td>
+          <td>{{user.User_Password}}</td>
+          <td>
+            <a href="/dashboard/users/edit/{{user.User_Id}}"><button class="btn btn-primary" type="submit" name="button1">Edit</button></a>
+            <a id="deleteuser" href="/dashboard/users/delete/{{user.User_Id}}"><button class="btn btn-danger" type="submit" name="button2">Delete</button</a>
+          </td>
+
+        </tbody>
+      </tr>
+
+      {% endfor %}
+  </table>
+
+</div>
+<form style="float:right;" action="/dashboard/users" method="POST">
+  {% csrf_token %}
+    <button class="btn btn-outline-secondary" type="submit" id="prev" value="prev" name="prev">Previous</button>
+    <input class="form" style="width:40px;height:30px;" type="number" name="page" id="page" value="{{page}}" readonly>
+    <button class="btn btn-outline-secondary" type="submit" id="next" value="next" name="next">Next</button>
+</form>
+  </div><!-- /.col-lg-9 -->
+
+  <script>
+    $(document).ready(()=>{
+      $(".sidebar").find(".active").removeClass("active");
+      $("#usernav").addClass("active");
+  })
+  </script>
+
+  {% endblock %}
