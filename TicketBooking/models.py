@@ -5,10 +5,6 @@ class Customer(models.Model):
     Customer_First_Name = models.CharField(max_length=100,default="Harry")
     Customer_Last_Name = models.CharField(max_length=100,default="Harry")
     Customer_Email = models.CharField(max_length=100,default="Harry")
-    # Customer_Password = models.CharField(max_length=100,default="Harry")
-
-    # def _str_(self):
-    #    return self.Customer_Email
 
 class Match(models.Model):
     Match_Id = models.AutoField(auto_created=True,primary_key=True)
@@ -22,8 +18,6 @@ class Booking(models.Model):
     No_Of_Tickets = models.CharField(max_length=100)
     Type_Of_Seats = models.CharField(max_length=100,default="seat")
     Customer_id = models.CharField(max_length=100,default="1")
-    #Customer_id = models.ForeignKey(Customer, on_delete = models.CASCADE,default=1)
-    # Match_id = models.CharField(max_length=100,default="1")
     Match = models.ForeignKey(Match, on_delete = models.CASCADE,default=1)
 
 
