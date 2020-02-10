@@ -31,3 +31,5 @@ class Meta:
     db_table="Booking"
     db_table="Match"
     db_table="User"
+
+        # migrations.RunSQL('insert into ticketbooking_user(User_Email,User_Password) values("admin@gmail.com","admin")')
