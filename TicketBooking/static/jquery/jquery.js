@@ -6,6 +6,7 @@ $(document).ready(()=>{
        });
 
 // images
+
     $(".slidershow").mousedown(function(){
     return false;
     });
