@@ -1,5 +1,5 @@
 asgiref==3.2.3
-Django==3.0
+Django==3.1.12
 mysql==0.0.2
 mysqlclient==1.4.6
 nltk==3.4.5
